@@ -1,0 +1,35 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "scripts": {
+    "build": "npm run migrate:deploy && remix build",
+    "dev": "remix dev",
+    "start": "remix-serve build",
+    "migrate:dev": "npx prisma migrate dev",
+    "migrate:deploy": "npx prisma migrate deploy",
+    "migrate:status": "npx prisma migrate status",
+    "generate": "npx prisma generate"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.mjs"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.5.0",
+    "@remix-run/node": "^1.7.5",
+    "@remix-run/react": "^1.7.5",
+    "@remix-run/serve": "^1.7.5",
+    "bcryptjs": "^2.4.3",
+    "isbot": "^3.5.4",
+    "prisma": "^4.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^1.7.5",
+    "@remix-run/eslint-config": "^1.7.5",
+    "eslint": "^8.23.1"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
